@@ -1,0 +1,9 @@
+name = "ai-gateway"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare Workers AI 绑定（旧项目原有配置）
+ai = { binding = "AI" }
+
+# 鉴权用 API Key（secret，已在 Cloudflare 中配置）
