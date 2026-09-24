@@ -3,7 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2025-06-01"
 compatibility_flags = ["nodejs_compat"]
 
-# Cloudflare Workers AI 绑定（旧项目原有配置）
+# Workers AI 绑定，在 dashboard 里勾选即可，无需额外 token
 ai = { binding = "AI" }
 
-# 鉴权用 API Key（secret，已在 Cloudflare 中配置）
+# 鉴权 key 与可选的 CORS 白名单都用 secret 配置，不要写进本文件：
+#   npx wrangler secret put API_KEY
+#   npx wrangler secret put ALLOW_ORIGIN   # 例：https://a.example.com,https://b.example.com
